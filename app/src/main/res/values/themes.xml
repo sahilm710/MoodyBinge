@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Base.Theme.MoodyBinge" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary Toolbar background -->
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorOnPrimary">@android:color/black</item>
+
+        <!-- Apply custom Toolbar globally -->
+        <item name="toolbarStyle">@style/CustomToolbarStyle</item>
+    </style>
+
+    <!-- Final app theme -->
+    <style name="Theme.MoodyBinge" parent="Base.Theme.MoodyBinge" />
+
+    <!-- Global Toolbar Style -->
+    <style name="CustomToolbarStyle" parent="Widget.Material3.Toolbar">
+        <!-- Title text -->
+        <item name="titleTextColor">@android:color/black</item>
+        <!-- Back arrow / menu icons -->
+        <item name="navigationIconTint">@android:color/black</item>
+    </style>
+
+</resources>

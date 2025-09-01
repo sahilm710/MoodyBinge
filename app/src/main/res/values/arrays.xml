@@ -1,0 +1,17 @@
+<resources>
+    <!-- What the user sees -->
+    <string-array name="language_options">
+        <item>English</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>Hindi</item>
+    </string-array>
+
+    <!-- Actual codes used for Locale -->
+    <string-array name="language_values">
+        <item>en</item>
+        <item>fr</item>
+        <item>es</item>
+        <item>hi</item>
+    </string-array>
+</resources>

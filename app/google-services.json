@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "377217661919",
+    "project_id": "moodybinge",
+    "storage_bucket": "moodybinge.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377217661919:android:6630bbdc791a7371cda26a",
+        "android_client_info": {
+          "package_name": "com.example.moodybinge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAESnL5jL2xj7WES2ueX-wg6IN1JNnNJqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

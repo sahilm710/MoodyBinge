@@ -1,0 +1,19 @@
+
+<resources>
+    <string name="app_name">MoodyBinge</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+    <string name="about">About</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="language_pref">Language</string>
+
+        <!-- Add these -->
+        <string name="current_password">Current Password</string>
+        <string name="new_password">New Password</string>
+        <string name="confirm_password">Confirm Password</string>
+        <string name="update_password">Update Password</string>
+
+
+</resources>
