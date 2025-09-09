@@ -12,12 +12,12 @@
         </item>
 
         <item
-            android:id="@+id/nav_favorites"
-            android:title="Favorites"
-            android:icon="@drawable/star_sharp_svgrepo_com"
-            >
-
+            android:id="@+id/nav_quotes"
+            android:title="Quotes"
+            android:icon="@drawable/comment_quotes_svgrepo_com" >
         </item>
+
+
 
         <item
             android:id="@+id/nav_settings"

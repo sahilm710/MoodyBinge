@@ -1,0 +1,49 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<!-- Background Image -->
+<ImageView
+    android:id="@+id/bgImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:src="@drawable/bg_quotes" />
+
+<!-- Transparent overlay (for readability) -->
+<View
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"/> <!-- semi-transparent black -->
+
+<!-- Content on top -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/quoteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random Quote Here"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_orange_light"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/btnNewQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Another Quote"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>
+</RelativeLayout>

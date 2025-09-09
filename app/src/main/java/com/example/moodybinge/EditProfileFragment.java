@@ -1,5 +1,7 @@
 package com.example.moodybinge;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +43,11 @@ public class EditProfileFragment extends Fragment {
         editEmail = view.findViewById(R.id.editEmail);
         saveBtn = view.findViewById(R.id.saveBtn);
 
+        // 🔹 Load saved values into EditTexts
+        SharedPreferences prefs = requireActivity().getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
+        editName.setText(prefs.getString("name", ""));
+        editEmail.setText(prefs.getString("email", ""));
+
         // 🔹 Save button logic
         saveBtn.setOnClickListener(v -> {
             String name = editName.getText().toString().trim();
@@ -49,9 +56,16 @@ public class EditProfileFragment extends Fragment {
             if (name.isEmpty() || email.isEmpty()) {
                 Toast.makeText(getContext(), "Please fill all fields", Toast.LENGTH_SHORT).show();
             } else {
-                // TODO: Save user details (Firebase or SharedPreferences)
+                // ✅ Save user details into SharedPreferences
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("name", name);
+                editor.putString("email", email);
+                editor.apply();
+
                 Toast.makeText(getContext(), "Profile updated!", Toast.LENGTH_SHORT).show();
-                requireActivity().getSupportFragmentManager().popBackStack(); // Go back
+
+                // Go back to AccountFragment
+                requireActivity().getSupportFragmentManager().popBackStack();
             }
         });
 

@@ -16,4 +16,8 @@
         <string name="update_password">Update Password</string>
 
 
+        <string name="fav_title">Your Favorites ⭐</string>
+        <string name="empty_favorites">No favorites yet ✨</string>
+
+
 </resources>

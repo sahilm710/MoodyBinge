@@ -66,14 +66,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_home) {
             selectedFragment = new HomeFragment();
-        } else if (id == R.id.nav_favorites) {
-            selectedFragment = new FavoritesFragment();
-        } else if (id == R.id.nav_settings) {
+        }
+        else if (id == R.id.nav_settings) {
             selectedFragment = new SettingsFragment();
-        } else if (id == R.id.nav_about) {
+        }
+        else if (id == R.id.nav_about) {
             selectedFragment = new AboutFragment();
-        } else if (id == R.id.nav_account) {   // ✅ NEW Account fragment added
+        }
+        else if (id == R.id.nav_account) {
             selectedFragment = new AccountFragment();
+        }
+        else if (id == R.id.nav_quotes) {   // ✅ NEW Quotes fragment
+            selectedFragment = new QuotesFragment();
         }
 
         if (selectedFragment != null) {
@@ -85,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
     @Override
     public void onBackPressed() {

@@ -1,6 +1,8 @@
 package com.example.moodybinge;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,11 +46,22 @@ public class AccountFragment extends Fragment {
         changePasswordBtn = view.findViewById(R.id.changePasswordBtn);
         logoutBtn = view.findViewById(R.id.logoutBtn);
 
-        // 🔹 Display user info
-        if (user != null) {
-            userEmail.setText(user.getEmail() != null ? user.getEmail() : "No Email");
-            userName.setText(user.getDisplayName() != null ? user.getDisplayName() : "No Name");
+        // 🔹 Load from SharedPreferences
+        SharedPreferences prefs = requireActivity().getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
+        String savedName = prefs.getString("name", "No Name");
+        String savedEmail = prefs.getString("email", null);
+
+        // 🔹 Show email (prefer SharedPreferences, fallback to Firebase)
+        if (savedEmail != null) {
+            userEmail.setText(savedEmail);
+        } else if (user != null && user.getEmail() != null) {
+            userEmail.setText(user.getEmail());
+        } else {
+            userEmail.setText("No Email");
         }
+
+        // 🔹 Show name (from SharedPreferences only)
+        userName.setText(savedName);
 
         // 🔹 Open Edit Profile Fragment
         editProfileBtn.setOnClickListener(v -> {

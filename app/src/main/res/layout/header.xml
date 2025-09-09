@@ -11,11 +11,11 @@
     <ImageView
         android:id="@+id/imgProfile"
         android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:scaleType="centerCrop"
+        android:layout_height="64dp"
         android:background="@drawable/backgroundcircle"
-        android:padding="8dp" />
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground" />
 
     <!-- App name -->
     <TextView
