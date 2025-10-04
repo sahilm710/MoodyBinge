@@ -44,9 +44,6 @@ UI Inspiration: Netflix theme (dark mode, white text, red accents).
 ✅ Multilingual interface (English, Hindi, Spanish).
 ✅ Real-time database sync with Firebase.
 
-📸 Screenshots
-
-(Include the screenshots you already took of reviews, stars, black theme, etc.)
 
 🧪 Journey & Learnings
 
